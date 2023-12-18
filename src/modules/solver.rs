@@ -15,7 +15,7 @@ impl SolverInfo {
             "Prompt: {} ({}) | Time taken: {}ms | Matches: {} | Sorting: {}\n\n",
             self.old_prompt.to_uppercase(),
             self.prompt.to_uppercase(),
-            self.time_taken.as_nanos() as f64 / 1_000_000_f64,
+            self.time_taken.as_nanos() as f64 / 1_000_000_f64, // ns to ms (shows up as 0ms if not converted)
             self.matches.len(),
             self.sorting
         )
